@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,9 @@ namespace EpionNodeGraph
 	/// <summary>
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
+	/// 
+
+
 	public partial class MainWindow : Window
 	{
 		public MainWindow()
