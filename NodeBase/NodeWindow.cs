@@ -8,5 +8,9 @@ namespace EpionNodeGraph.NodeBase
 {
 	class NodeWindow
 	{
+		public NodeWindow()
+		{
+
+		}
 	}
 }

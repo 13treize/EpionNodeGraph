@@ -59,9 +59,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.cs" />
+    <Compile Include="Model\CloseTabItem.cs" />
+    <Compile Include="Model\DragDropTarget.cs" />
     <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\TextEditor.cs" />
+    <Compile Include="Model\TextEditorTabItem.cs" />
     <Compile Include="NodeBase\NodeBase.cs" />
     <Compile Include="NodeBase\NodeMenu.cs" />
+    <Compile Include="NodeBase\NodeTabItem.cs" />
     <Compile Include="NodeBase\NodeWindow.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
@@ -96,8 +101,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Command\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

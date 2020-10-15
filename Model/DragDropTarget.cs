@@ -1,23 +1,21 @@
 ﻿using GongSolutions.Wpf.DragDrop;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 
-namespace EpionNodeGraph.ViewModel
+namespace EpionNodeGraph.Model
 {
-	public class ViewModel : IDropTarget
+	public class DragDropTarget : IDropTarget
 	{
 		public ObservableCollection<string> Files { get; set; }
-
-		public ViewModel()
+		public DragDropTarget()
 		{
 			Files = new ObservableCollection<string>();
-		}
-		public void MenuItem()
-		{
-			NodeBase.NodeMenu nodeMenu= new NodeBase.NodeMenu();
 		}
 
 		public void DragOver(IDropInfo dropInfo)
@@ -51,5 +49,6 @@ namespace EpionNodeGraph.ViewModel
 			var extension = Path.GetExtension(data);
 			return extension != null && extension == ".eshader";
 		}
+
 	}
 }

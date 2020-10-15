@@ -29,10 +29,13 @@ namespace EpionNodeGraph
 		{
 			InitializeComponent();
 			this.DataContext = new ViewModel.ViewModel();
-		}
 
-		private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
+			NodeBase.NodeTabItem a = new NodeBase.NodeTabItem("Tab1");
+			NodeBase.NodeTabItem b = new NodeBase.NodeTabItem("Tab2");
+			Model.TextEditorTabItem c = new Model.TextEditorTabItem("TextEditor");
+			this.TabWindow.Items.Add(a);
+			this.TabWindow.Items.Add(b);
+			this.TabWindow.Items.Add(c);
 
 		}
 	}

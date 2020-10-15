@@ -3,51 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace EpionNodeGraph.NodeBase
 {
 	public class NodeMenu
 	{
-		public string Name { get; set; }
-		public List<NodeMenu> Child { get; set; }
-	}
+		public WrapPanel WrapPanel { get; set; }
 
-	public class NodeMenuTreeView
-	{
-		public List<NodeMenu> treeview { get; set; }
-		public void Init()
+		public NodeMenu()
 		{
+			WrapPanel = new WrapPanel();
 
-			this.treeview = new List<NodeMenu>
+			Menu MainMenu = new Menu();
+			MenuItem menuFile = new MenuItem();
+			menuFile.Header = "File";
 			{
-				new NodeMenu
-				{
-					Name = "田中　太郎",
-					Child = new List<NodeMenu>
-					{
-						new NodeMenu { Name = "田中　花子" },
-						new NodeMenu { Name = "田中　一郎" },
-						new NodeMenu
-						{
-							Name = "木村　貫太郎",
-							Child = new List<NodeMenu>
-							{
-								new NodeMenu { Name = "木村　はな" },
-								new NodeMenu { Name = "木村　梅" },
-							}
-						}
-					}
-				},
-				new NodeMenu
-				{
-					Name = "田中　次郎",
-					Child = new List<NodeMenu>
-					{
-						new NodeMenu { Name = "田中　三郎" }
-					}
-				}
-			};
+				MenuItem menuFileQuit = new MenuItem();
+				menuFileQuit.Header = "Quit";
+				RoutedEventHandler EventClick = new RoutedEventHandler(this.Quit_Click);
+				menuFileQuit.Click += EventClick;
+				menuFile.Items.Add(menuFileQuit);
+			}
+			MenuItem menuEdit = new MenuItem();
+			menuEdit.Header = "Edit";
+			MenuItem menuOption = new MenuItem();
+			menuOption.Header = "Option";
+
+			MainMenu.Items.Add(menuFile);
+			MainMenu.Items.Add(menuEdit);
+			MainMenu.Items.Add(menuOption);
+			WrapPanel.Children.Add(MainMenu);
 
 		}
+
+		private void Quit_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
+
 	}
+
 }

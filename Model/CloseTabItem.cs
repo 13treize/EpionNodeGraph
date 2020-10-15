@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace EpionNodeGraph.Model
 {
-	class Model
+	public class CloseTabItem : TabItem
 	{
-	}
-
-
-	public class TabTemplate
-	{
+		static CloseTabItem()
+		{
+		}
 	}
 }
