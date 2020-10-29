@@ -18,7 +18,7 @@
 			</MenuItem>
 		</Menu>-->
 
-		<TreeView HorizontalAlignment="Left" Height="695" VerticalAlignment="Top" Width="240">
+		<TreeView Name="NodeTreeViews" HorizontalAlignment="Left" Height="695" VerticalAlignment="Top" Width="240">
 			<TreeViewItem Header="Node" Height="280">
 				<TreeViewItem Header="Artistic"/>
 				<TreeViewItem Header="Channel"/>
@@ -30,10 +30,10 @@
 			</TreeViewItem>
 		</TreeView>
 
-        <TabControl Name="TabWindow" HorizontalAlignment="Left" Height="695" Margin="240,0,0,0" VerticalAlignment="Top" Width="1520"/>
+		<TabControl Name="TabWindow" HorizontalAlignment="Left" Height="695" Margin="240,0,0,0" VerticalAlignment="Top" Width="1520"/>
 
 
-        <TabControl HorizontalAlignment="Left" Height="205" Margin="240,720,0,0" VerticalAlignment="Top" Width="1520" Grid.ColumnSpan="2">
+		<TabControl HorizontalAlignment="Left" Height="205" Margin="240,720,0,0" VerticalAlignment="Top" Width="1520" Grid.ColumnSpan="2">
 			<TabItem Header="TabItem">
 				<Grid Background="#00FFFFFF">
 					<Image x:Name="Images" Source="Assets/source.jpg" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>

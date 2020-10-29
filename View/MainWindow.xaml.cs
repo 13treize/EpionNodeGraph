@@ -36,7 +36,6 @@ namespace EpionNodeGraph
 			this.TabWindow.Items.Add(a);
 			this.TabWindow.Items.Add(b);
 			this.TabWindow.Items.Add(c);
-
 		}
 	}
 }

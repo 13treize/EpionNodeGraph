@@ -35,7 +35,6 @@ namespace EpionNodeGraph.NodeBase
 			MainMenu.Items.Add(menuEdit);
 			MainMenu.Items.Add(menuOption);
 			WrapPanel.Children.Add(MainMenu);
-
 		}
 
 		private void Quit_Click(object sender, RoutedEventArgs e)
